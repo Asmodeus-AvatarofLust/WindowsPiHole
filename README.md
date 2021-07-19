@@ -43,11 +43,15 @@ Supported versions of Windows:
 
 20H2 - Has it included.
 
-## Instructions
-Copy ~~PiHWinv1.0.cmd~~ PiHole4Win10.bat to your computer, right click on it and select "Run as Administrator".
-- Script **will not** run unless ran as Administrator. It needs to have Administrator priviledges in order for it to successfully setup.
+21H1 - Has it included.
 
-## What will Script do
+## Instructions
+Copy ~~PiHWinv1.0.cmd~~ PiHole4Win10.bat to your desktop, right click on it and select "Run as Administrator".
+- ~~Script **will not** run unless ran as Administrator. It needs to have Administrator priviledges in order for it to successfully setup.~~
+- I have made few changes to this script, and one of them is that I have put a more efficient "administrator privileges checker" before script, so even if you ran it without Administrator Privileges.
+- Same script has also been added when creating Uninstaller, so you can not accidentally start Uninstaller without privileges and making it fail everything, so you gotta restart and mess around etc etc...
+
+## What will this Script do
 Speed of how fast will Script finish downloading/configuring depends on your hardware and internet speed.
 Script will:
 * Enable WSL1.
@@ -61,8 +65,13 @@ Script will:
 * Patch Pi-hole installer to use netstat.exe instead of lsof, along with other fix-ups for WSL1 compatibility.
 * Add exceptions to Windows Firewall for DNS and the Pi-hole admin page.
 * Includes a Scheduled Task to auto-start on boot, before logon.
-* **If it does not start automatically, it means that this script failed to create Scheduled Task properly, which is common. Configure it manually in order for it to work**
+* **If it does not start automatically, it means that this script failed to create Scheduled Task properly, which is common. Configure it manually in order for it to work**. If you do not know how to do so, you can find short guide below.
 
-## Configuration and Tweaks/Tips
+#### Task Scheduler
+* Open Windows Task Scheduler (taskschd.msc) and right-click the Pi-hole for Windows task, click edit.
+* On the General tab, place a checkmark next to both Run whether user is logged on or not and Hidden.
+* On the Conditions tab, un-check the option Start the task only if the computer is on AC power.
+
+## Configuration
 
 Pi-Hole configuration batch file can be found in C:\Program Files.
