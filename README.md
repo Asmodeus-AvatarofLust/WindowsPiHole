@@ -21,10 +21,11 @@ This script STILL fetches CloudFlared DNS from [original repository](https://git
 
 ## How does it work
 ### Script
-This script works by utilizing the Windows Subsystem for Linux, so it is possible to run Pi-Hole on Windows machine just like any other Windows Application. It will perform an automatic installation of Pi-Hole on Windows 10 (Recommended to be up-to-date for both Windows version and of Version of Windows 10) and/or Windows Server 2019 (Core and Standard), without any need of **Virtualization**, **Docker** or **Linux expertise**.
+This script works by utilizing the Windows Subsystem for Linux, so it is possible to run Pi-Hole on Windows machine just like any other Windows Application. It will perform an automatic installation of Pi-Hole on Windows 10 (Recommended to be up-to-date for both Windows version and build version) and/or Windows Server 2019 (Core and Standard), without any need of **Virtualization**, **Docker** or **Linux expertise**.
 
 This approach uses fewer resources than the better-known hypervisor/container solution, and runs on older CPU's without VT support, or on a VPS without pass-through virtualization.
-### Pi-Hole
+
+# Pi-Hole
 
 ## Requirements
 Windows Version 10 **Highly Recommended**.
